@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cooking & Cleaning Demo</title>
+</head>
+<body>
+<center>
+  <h2>Cooking & Kitchen Cleaning</h2>
+  <button onclick="startTasks()">Start Tasks</button>
+
+  <p id="status"></p>
+
+  <script>
+    function cook() {
+      const status = document.getElementById("status");
+      status.innerHTML += "Cooking started...<br>";
+      setTimeout(() => {
+        status.innerHTML += "Cooking finished!<br>";
+      }, 3000); 
+    }
+
+    function cleanKitchen() {
+      const status = document.getElementById("status");
+      status.innerHTML += "Cleaning the kitchen...<br>";
+      setTimeout(() => {
+        status.innerHTML += "All Done<br>";
+      }, 5000); 
+    }
+
+    function startTasks() {
+      document.getElementById("status").innerHTML = "";
+      cook();
+      cleanKitchen();
+    }
+  </script>
+</center>
+</body>
+</html>

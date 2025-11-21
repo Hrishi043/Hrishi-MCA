@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admission Registration Form</title>
+  <style> 
+    @keyframes example {
+      from {
+        background-color: red;
+      } 
+      to {
+        background-color: yellow;
+      } 
+    }
+
+    /* Animate the background color across full width of the form */
+    .form-title {
+      animation-name: example;
+      animation-duration: 4s; 
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      padding: 10px 0;          /* Vertical padding */
+      color: black;
+      font-weight: bold;
+      width: 100%;              /* Full width */
+      text-align: center;       /* Center the text */
+      border-radius: 5px 5px 0 0; /* Rounded corners on top */
+      box-sizing: border-box;   /* Include padding in width */
+    }
+  </style>
+</head>
+<body>
+<br><br>
+<center>
+  <table border="0" width="794" cellpadding="10" cellspacing="0">
+    <tr>
+      <td>
+        <table border="1" width="100%" cellpadding="15" cellspacing="0">
+          <tr>
+            <td>
+              <div class="form-title">
+                Admission Registration Form
+              </div>
+              <form action="/submit" method="post">
+                <h3>Course Selection</h3>
+                <table border="0" width="100%">
+                  <tr>
+                    <td>Choose Course:</td>
+                    <td>
+                      <input type="radio" name="course" value="BA"> BA
+                      <input type="radio" name="course" value="B.Sc"> B.Sc
+                      <input type="radio" name="course" value="BCA"> BCA
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+                <table border="0" width="100%" cellspacing="5">
+                  <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text" name="name" required></td>
+                  </tr>
+                  <tr>
+                    <td>Gender:</td>
+                    <td>
+                      <input type="radio" name="gender" value="Male"> Male
+                      <input type="radio" name="gender" value="Female"> Female
+                      <input type="radio" name="gender" value="Other"> Other
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" required></td>
+                  </tr>
+                  <tr>
+                    <td>Address:</td>
+                    <td><textarea name="address" rows="3" cols="40"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="tel" name="phone" placeholder="10-digit number"></td>
+                  </tr>
+                  <tr>
+                    <td>Guardian's Name:</td>
+                    <td><input type="text" name="guardian"></td>
+                  </tr>
+                  <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                      <input type="checkbox" name="hobby[]" value="Sports"> Sports
+                      <input type="checkbox" name="hobby[]" value="Music"> Music
+                      <input type="checkbox" name="hobby[]" value="Reading"> Reading
+                      <input type="checkbox" name="hobby[]" value="Dance"> Dance
+                      <input type="checkbox" name="hobby[]" value="Other"> Other
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Extra-Curricular Activities:</td>
+                    <td><textarea name="extra" rows="3" cols="40"></textarea></td>  
+                  </tr>
+                </table>
+
+                <!-- Office Use -->
+                <h3>For Office Use Only</h3>
+                <table width="100%" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td width="25%">Admission No.</td>
+                    <td><input type="text" name="admission_no" style="width: 100%;"></td>
+                  </tr>
+                  <tr>
+                    <td>Course Code</td>
+                    <td><input type="text" name="course_code" style="width: 100%;"></td>
+                  </tr>
+                  <tr>
+                    <td>Verified By</td>
+                    <td><input type="text" name="verified_by" style="width: 100%;"></td>
+                  </tr>
+                  <tr>
+                    <td>Remarks</td>
+                    <td><input type="text" name="remarks" style="width: 100%;"></td>
+                  </tr>
+                </table>
+
+                <br>
+                <center>
+                  <input type="submit" value="Submit Application">
+                </center>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</center>
+<br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even or Odd</title>
+  <style>
+    body {
+      background-color: #0088ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px; /* You can keep or remove this */
+    }
+  </style>
+</head>
+<body>
+  <h2>Even or Odd</h2>
+  <input id="num" type="number" placeholder="Enter number">
+  <button onclick="check()">Check</button>
+  <p id="output"></p>
+
+  <script>
+    function check() {
+      const n = document.getElementById("num").value;
+      const out = document.getElementById("output");
+      if (n === "") {
+        out.textContent = "Enter a number.";
+      } else if (n % 2 === 0) {
+        out.textContent = n + " is even.";
+      } else {
+        out.textContent = n + " is odd.";
+      }
+    }
+  </script>
+</body>
+</html>
+

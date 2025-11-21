@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+  <style> 
+    @keyframes example {
+      from {
+        background-color: red;
+      } 
+      to {
+        background-color: yellow;
+      } 
+    }
+  
+    @keyframes slideIn { 
+      from {
+        margin-left: 100%;
+      } 
+      to {
+        margin-left: 0%;
+      } 
+    }
+  
+    /* Animate the entire background */
+    body {
+      animation-name: example; 
+      animation-duration: 4s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate;
+      margin: 0;  /* To cover whole viewport */
+      height: 100vh;  /* Full height */
+    }
+  
+    .animated-text { 
+      width: 100%; 
+      /* Remove background-color here, so the body's animated background is visible */
+      color: white; /* Optional: text color for contrast */
+    }
+  
+    .slide-in-text { 
+      width: 100%; 
+      margin-left: 100%; 
+      animation: slideIn 9s forwards; 
+    } 
+  </style> 
+</head> 
+<body>
+
+<h1 class="animated-text">Color Changing Text</h1> 
+<h1 class="slide-in-text"></h1>
+
+</body> 
+</html>

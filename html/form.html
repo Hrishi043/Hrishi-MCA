@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admission Registration Form</title>
+</head>
+<body>
+  <center>
+    <table border="1" width="794" cellpadding="15" cellspacing="0">
+      <tr>
+        <td>
+          <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 20px;">
+            <h2 style="margin: 0;">Admission Registration Form</h2>
+          </div>
+
+          <form action="/submit" method="post">
+            <h3>Course Selection</h3>
+            <table width="100%" cellspacing="5">
+              <tr>
+                <td>Choose Course:</td>
+                <td>
+                  <input type="radio" name="course" value="BA"> BA
+                  <input type="radio" name="course" value="B.Sc"> B.Sc
+                  <input type="radio" name="course" value="BCA"> BCA
+                </td>
+              </tr>
+            </table>
+
+            <h3>Personal Information</h3>
+            <table width="100%" cellspacing="5">
+              <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="name" required></td>
+              </tr>
+              <tr>
+                <td>Gender:</td>
+                <td>
+                  <input type="radio" name="gender" value="Male"> Male
+                  <input type="radio" name="gender" value="Female"> Female
+                  <input type="radio" name="gender" value="Other"> Other
+                </td>
+              </tr>
+              <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required></td>
+              </tr>
+              <tr>
+                <td>Address:</td>
+                <td><textarea name="address" rows="3" cols="40"></textarea></td>
+              </tr>
+              <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone" placeholder="10-digit number"></td>
+              </tr>
+              <tr>
+                <td>Guardian's Name:</td>
+                <td><input type="text" name="guardian"></td>
+              </tr>
+              <tr>
+                <td>Hobbies:</td>
+                <td>
+                  <input type="checkbox" name="hobby[]" value="Sports"> Sports
+                  <input type="checkbox" name="hobby[]" value="Music"> Music
+                  <input type="checkbox" name="hobby[]" value="Reading"> Reading
+                  <input type="checkbox" name="hobby[]" value="Dance"> Dance
+                  <input type="checkbox" name="hobby[]" value="Other"> Other
+                </td>
+              </tr>
+              <tr>
+                <td>Extra-Curricular Activities:</td>
+                <td><textarea name="extra" rows="3" cols="40"></textarea></td>  
+              </tr>
+            </table>
+
+            <h3>For Office Use Only</h3>
+            <table width="100%" cellspacing="5">
+              <tr>
+                <td width="25%">Admission No.</td>
+                <td><input type="text" name="admission_no" style="width: 100%;"></td>
+              </tr>
+              <tr>
+                <td>Remarks</td>
+                <td><input type="text" name="remarks" style="width: 100%;"></td>
+              </tr>
+            </table>
+
+            <br>
+            <center>
+              <input type="submit" value="Submit Application">
+            </center>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
